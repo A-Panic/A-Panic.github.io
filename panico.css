@@ -45,16 +45,43 @@ nav {
   padding-bottom: 56.25%;
 }
 
+.card-img-overlay {
+  background-color: #0008;
+}
+
+#show-osmosi {
+  transition: 0.3s;
+  opacity: 0;
+}
+#card-osmosi:hover #show-osmosi {
+  opacity: 1;
+}
+
+#show-iride {
+  transition: 0.3s;
+  opacity: 0;
+}
+#card-iride:hover #show-iride {
+  opacity: 1;
+}
+
+#show-talitha {
+  transition: 0.3s;
+  opacity: 0;
+}
+#card-talitha:hover #show-talitha {
+  opacity: 1;
+}
+
+
+/*-------------------------------
+  altro
+-------------------------------*/
 
 .container.bottom-content {
   background-color: #f5f5f5;
   border-radius: 0.3rem;
 }
-
-
-/*-------------------------------
-  Cards
--------------------------------*/
 
 hr {
   border-top: 1px solid rgba(255,255,255,.3);

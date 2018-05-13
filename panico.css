@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(https://source.unsplash.com/category/food/1080x720) no-repeat center fixed;
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(mountains.jpg) no-repeat center fixed;
   background-size: cover, cover;
 }
 
@@ -49,29 +49,17 @@ nav {
   background-color: #0008;
 }
 
-#show-osmosi {
+#show-osmosi, #show-iride, #show-talitha {
   transition: 0.3s;
   opacity: 0;
-}
-#card-osmosi:hover #show-osmosi {
-  opacity: 1;
 }
 
-#show-iride {
-  transition: 0.3s;
-  opacity: 0;
-}
-#card-iride:hover #show-iride {
-  opacity: 1;
-}
-
-#show-talitha {
-  transition: 0.3s;
-  opacity: 0;
-}
+#card-osmosi:hover #show-osmosi,
+#card-iride:hover #show-iride,
 #card-talitha:hover #show-talitha {
   opacity: 1;
 }
+
 
 
 /*-------------------------------

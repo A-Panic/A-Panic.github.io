@@ -40,14 +40,8 @@ nav {
   Cards
 -------------------------------*/
 
-.card-deck .card {
-  vertical-align: bottom;
-  min-height: 200px;
-  border: none;
-}
-
-.card-body {
-  flex: none;
+.card {
+  min-height: 180px;
 }
 
 

@@ -1,0 +1,107 @@
+body {
+  padding-top: 0;
+}
+
+nav {
+  min-height: 80px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-dark {
+  background-color: #333;
+}
+
+.nav-link.active {
+  background-color: #222;
+  border-radius: .2rem;
+}
+
+.footer {
+  height: 300px;
+  background-color: #333;
+}
+
+.carousel-item {
+  margin-top: 80px;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  text-shadow: 0px 1px 6px #0004;
+}
+
+.big-padding {
+  padding: 100px 0;
+}
+
+.popover {
+  z-index: 100;
+}
+
+.popover-body img {
+  padding-bottom: 15px;
+}
+
+.btn-secondary {
+    color: #333;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-color: #333;
+    border: 4px solid;
+    border-radius: .0rem;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #333;
+    border-color: #333;
+}
+.btn-secondary.focus, .btn-secondary:focus {
+    color: #fff;
+    box-shadow: 0 0 0 0rem rgba(108,117,125,0);
+    background-color: #333b;
+    border-color: #333b;
+}
+
+/*-------------------------------
+  Animate
+-------------------------------*/
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+
+
+
+
+
+
+
+
+
+head-logo {
+  background-color: #eee;
+  align-content: center;
+}

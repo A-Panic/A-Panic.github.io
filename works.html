@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panico Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="panico.css">
+  </head>
+  <body>
+
+    <header class="header clearfix">
+      <a href="index.html" class="header_logo"><img src="images/pp_logo.svg" alt="Logo"></a>
+      <a href="" class="header_icon-bar"><i class="material-icons">menu</i>
+      </a>
+      <ul class="header_menu animate">
+        <li class="header_menu_item"><a href="index.html">Home</a></li>
+        <li class="header_menu_item"><a href="works.html">Works</a></li>
+        <li class="header_menu_item"><a href="links.html">Links</a></li>
+      </ul>
+    </header>
+
+
+
+    <section class="cover">
+      <div class="cover_filter"></div>
+      <div class="cover_caption">
+        <div class="cover_caption_copy">
+          <h1>Works</h1>
+          <h3>Things I do when I'm inspired</h3>
+        </div>
+      </div>
+    </section>
+
+
+
+    <article class="intro">
+      <div class="intro_copy shadow">
+        <h1>Personalizing my experience</h1>
+        <h3>The path through my jump into Android Customization</h3>
+        <h4>written by Andrea Panico, May 2018</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </article>
+
+
+
+    <section class="card_row clearfix">
+      <div class="card shadow">
+        <img class="card_image" src="images/osmosi.svg" alt="Osmosi Image">
+        <div class="card_copy">
+          <h3>Osmosi</h3>
+          <p>Vanilla Android Theme based on the Substratum theming system</p>
+        </div>
+      </div>
+      <div class="card shadow">
+        <img class="card_image" src="images/iride.svg" alt="Iride Image">
+        <div class="card_copy">
+          <h3>Iride</h3>
+          <p>OxygenOS Android Theme based on the Substratum theming system</p>
+        </div>
+      </div>
+      <div class="card shadow">
+        <img class="card_image" src="images/talitha.svg" alt="Talitha Image">
+        <div class="card_copy">
+          <h3>Talitha</h3>
+          <p>Icon pack series for Android Homescreens</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <p>Copyright - 2018 Andrea Panico</p>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      /*aspetta che il documenti sia pronto*/
+      $(document).ready(function(){
+        /*seleziona la classe in verde ed esegui al click*/
+        $(".header_icon-bar").click(function(e){
+          /*seleziona la classe in verde e modifica*/
+          $(".header_menu").toggleClass('is-open');
+          /*sovrascrivi evento di default*/
+          e.preventDefault();
+
+        });
+
+      });
+
+    </script>
+
+  </body>
+</html>

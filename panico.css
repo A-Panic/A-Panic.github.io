@@ -1,135 +1,304 @@
-body {
-  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(mountains.jpg) no-repeat center fixed;
-  background-size: cover, cover;
+html, body {
+  height: 100%;
+  font-family: "roboto";
 }
+
+body {
+  background-color: #eee;
+}
+
+
 
 /*-------------------------------
-    Navbar Customization
+    General Customization
 -------------------------------*/
 
-nav {
-  min-height: 80px;
+.animate {
+  transition: all 0.3s ease-out;
 }
 
-.navbar-dark {
+.shadow {
+  box-shadow: 0 4px 4px #0002;
+}
+
+
+
+/*-------------------------------
+  Header
+-------------------------------*/
+
+.header {
   background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0) );
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }
 
-.navbar-brand img {
+.header_logo {
+  color: white;
+  float: left;
+  padding: 5px;
+}
+.header_logo img{
   height: 70px;
   width: 70px;
 }
 
-.nav-item {
-  text-align: right;
-  text-shadow: 0px 1px 6px #0004;
+.header_icon-bar {
+  display: block;
+  color: white;
+  float: right;
+  padding: 28px;
+  display: none;
+}
+.header_icon-bar:hover {
+  background: #fff2;
 }
 
-.navbar-toggler {
-  padding: .5rem .5rem;
-  border: 0px solid transparent;
-  border-radius: 3rem;
+.header_menu {
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-toggler:active, .navbar-toggler:hover, .navbar-toggler:focus{
-  background-color: #fff3;
+.header_menu_item {
+  display: inline-block;
 }
+.header_menu_item a {
+  color: white;
+  font-weight: 400;
+  display: block;
+  padding: 32px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header_menu_item a:hover {
+  background: #fff2;
+}
+
+
+
+/*-------------------------------
+  Cover
+-------------------------------*/
+
+.cover {
+  width: 100%; height: 70%;
+  background-image: url(images/mountains.jpg); background-position: center center; background-size: cover;
+  position: relative;
+  z-index: 0
+}
+
+.cover_filter {
+  width: 100%; height: 100%;
+  background: black;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.cover_caption {
+  height: 100%; width: 100%;
+  display:table;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.cover_caption_copy {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+}
+.cover_caption_copy h1 {
+  font-size: 48px;
+  font-weight: 200;
+}
+.cover_caption_copy h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 
 
 /*-------------------------------
   Cards
 -------------------------------*/
 
-.card-ratio {
+.card_row{
+  display: flex !important;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.card{
+  flex: 1;
+  max-width: 30%;
+  margin: 1.5%;
+  background-color: white;
+  float: left;
+  border-radius: 5px;
+}
+
+.card_image {
   width: 100%;
-  padding-bottom: 56.25%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-.card-img-overlay {
-  background-color: #0008;
+.card_copy {
+  padding: 5px 20px;
 }
-
-#show-osmosi, #show-iride, #show-talitha {
-  transition: 0.3s;
-  opacity: 0;
-}
-
-#card-osmosi:hover #show-osmosi,
-#card-iride:hover #show-iride,
-#card-talitha:hover #show-talitha {
-  opacity: 1;
+.card_copy h3 {
+  margin: 10px 0;
 }
 
 
 
 /*-------------------------------
-  altro
+  Banner
 -------------------------------*/
 
-.container.bottom-content {
-  background-color: #f5f5f5;
-  border-radius: 0.3rem;
+.banner {
+  background: white;
+  height: 50%;
 }
 
-hr {
-  border-top: 1px solid rgba(255,255,255,.3);
+.banner_image {
+  width: 30%;
+  height: 100%;
+  float: left;
+  background-image: url(images/mountains.jpg);
+  background-position: center center;
+  background-size: cover;
 }
 
+.banner_copy {
+  display: table;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.banner_copy_text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 30px;
+}
+
+
+
+/*-------------------------------
+  Intro
+-------------------------------*/
+
+.intro {}
+.intro_copy {
+  background: white;
+  max-width: 800px;
+  padding: 30px 40px;
+  margin: 20px auto;
+  margin-top: -40px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 50;
+}
+
+
+/*-------------------------------
+  Footer
+-------------------------------*/
 
 .footer {
-  height: 300px;
+  height: 200px;
   background-color: #333;
-}
-
-.big-padding {
-  padding-top: 120px;
-}
-
-.huge-padding-top {
-  padding-top: 300px;
-}
-
-.popover {
-  z-index: 100;
-}
-
-.popover-body img {
-  padding-bottom: 15px;
+  color: white;
+  padding: 30px;
+  margin-top: 40px;
 }
 
 
 
 /*-------------------------------
-  Mozilla selection fix
+  Smartphone Layout
 -------------------------------*/
+
+@media (max-width: 767px) {
+
+  /*Header*/
+  .header_icon-bar {
+    display: block;
+  }
+  .header_menu {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+  }
+  .header_menu_item {
+    display: block;
+  }
+  .header_menu_item a {
+    text-align: right;
+    padding: 20px;
+  }
+  .is-open {
+    height: 300px;
+    overflow: auto;
+  }
+
+  /*Cover*/
+  .cover {
+    height: 100%;
+  }
+
+  /*Cards*/
+  .card_row{
+    display: block !important;
+    margin: 20px 0;
+  }
+  .card {
+    display: block;
+    min-width: 97%;
+  }
+
+  /*Banner*/
+  .banner {
+    height: auto;
+  }
+  .banner_image {
+    width: 100%;
+    height: 200px;
+  }
+  .banner_copy {
+    width: 100%;
+  }
+
+}
 
 
 
 /*-------------------------------
-  Animate
+  Additional Stuff
 -------------------------------*/
 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
 
-.animated.infinite {
-  animation-iteration-count: infinite;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInUp {
-  animation-name: fadeInUp;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }

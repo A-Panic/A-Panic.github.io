@@ -21,6 +21,23 @@ body {
   box-shadow: 0 4px 4px #0002;
 }
 
+.button {
+  color: white;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 3px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background: #4d67bc;
+  box-shadow: 0 2px 2px #0002;
+}
+.button:hover {
+  background: #657cc5;
+  box-shadow: 0 3px 4px #0004;
+}
+
 
 
 /*-------------------------------
@@ -176,16 +193,30 @@ body {
 }
 
 .banner_copy {
-  display: table;
   width: 70%;
   height: 100%;
   float: left;
 }
 
 .banner_copy_text {
-  display: table-cell;
-  vertical-align: middle;
+  position: relative;
   padding: 30px;
+  height: 100%;
+}
+.banner_copy_text h2{
+  margin: 0 auto;
+}
+.banner_copy_text h3{
+  margin: 15px auto;
+}
+.banner_copy_text p{
+  margin-bottom: 70px
+}
+.banner_copy_text a{
+  position: absolute;
+  margin: 0;
+  bottom: 30px;
+  right: 30px;
 }
 
 

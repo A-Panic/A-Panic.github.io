@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panico Projects - Talitha</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="panico.css">
+  </head>
+  <body>
+
+    <header class="header clearfix">
+      <a href="index.html" class="header_logo"><img src="images/pp_logo.svg" alt="Logo"></a>
+      <a href="" class="header_icon-bar"><i class="material-icons">menu</i>
+      </a>
+      <ul class="header_menu animate">
+        <li class="header_menu_item"><a href="index.html">Home</a></li>
+        <li class="header_menu_item"><a href="works.html">Works</a></li>
+        <li class="header_menu_item"><a href="links.html">Links</a></li>
+      </ul>
+    </header>
+
+
+
+    <section class="cover" style="background-image:url(images/talitha.svg)">
+      <div class="cover_filter"></div>
+      <div class="cover_caption">
+        <div class="cover_caption_copy">
+          <h1>Talitha</h1>
+          <h3>Simple shapes + Creativity + Love</h3>
+        </div>
+      </div>
+    </section>
+
+
+
+    <article class="intro">
+      <div class="intro_copy shadow">
+        <h2>Clean AF</h2>
+        <p>
+          The main icon pack family that brings to your homescreen a wave of pure personalization.
+          The glossy finish upon all the icons, the pixel-perfection study behind all the shapes, the order of a clean set of icons:
+          <br>
+          <b>This is Talitha.</b>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+    </article>
+
+
+
+    <section class="banner shadow clearfix">
+      <div class="banner_image" style="background-image: url(images/t_square.png); background-position: bottom center;"></div>
+      <div class="banner_copy">
+        <div class="banner_copy_text">
+          <h2>Talitha Square</h2>
+          <h3>The old-look one</h3>
+          <p>In this variation the dominant shape is the square, as already seen on Nexus devices running Android Oreo, this shape is as simple as beautiful.</p>
+          <a class="button" target="_blank" href="https://bit.ly/getSquares">Get Squares</a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <p>Copyright - 2018 Andrea Panico</p>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      /*aspetta che il documenti sia pronto*/
+      $(document).ready(function(){
+        /*seleziona la classe in verde ed esegui al click*/
+        $(".header_icon-bar").click(function(e){
+          /*seleziona la classe in verde e modifica*/
+          $(".header_menu").toggleClass('is-open');
+          /*sovrascrivi evento di default*/
+          e.preventDefault();
+
+        });
+
+      });
+
+    </script>
+
+  </body>
+</html>

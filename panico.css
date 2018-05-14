@@ -30,11 +30,9 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
-  background: #4d67bc;
   box-shadow: 0 2px 2px #0002;
 }
 .button:hover {
-  background: #657cc5;
   box-shadow: 0 3px 4px #0004;
 }
 
@@ -110,7 +108,7 @@ body {
   width: 100%; height: 100%;
   background: black;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   opacity: 0.5;
 }
 
@@ -156,6 +154,27 @@ body {
   background-color: white;
   float: left;
   border-radius: 5px;
+  position: relative;
+  z-index: 0
+}
+
+.card_filter {
+  width: 100%; height: 100%;
+  background: #0006;
+  display: table;
+  color: white; font-size: 30px; font-weight: 600; text-align: center; text-decoration: none; text-transform: uppercase;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  transition: 0.3s;
+  opacity: 0;
+}
+.card_filter:hover {
+  opacity: 1;
+}
+.card_filter span {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .card_image {
@@ -181,6 +200,7 @@ body {
 .banner {
   background: white;
   height: 50%;
+  margin: 10px 0;
 }
 
 .banner_image {
@@ -283,6 +303,9 @@ body {
   .cover {
     height: 100%;
   }
+  .cover--subpages{
+    height: 70%;
+  }
 
   /*Cards*/
   .card_row{
@@ -297,12 +320,17 @@ body {
   /*Banner*/
   .banner {
     height: auto;
+    display: flex !important;
+    flex-direction: column;
   }
   .banner_image {
+    order: 1;
     width: 100%;
     height: 200px;
   }
   .banner_copy {
+    order: 2;
+    display: table-footer-group !important;
     width: 100%;
   }
 

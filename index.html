@@ -10,15 +10,14 @@
   </head>
   <body>
 
-    <header class="header clearfix">
+    <header class="header">
       <a href="index.html" class="header_logo"><img src="images/pp_logo.svg" alt="Logo"></a>
-      <a href="" class="header_icon-bar"><i class="material-icons">menu</i>
-      </a>
       <ul class="header_menu animate">
-        <li class="header_menu_item"><a href="index.html">Home</a></li>
         <li class="header_menu_item"><a href="works.html">Works</a></li>
-        <li class="header_menu_item"><a href="links.html">Links</a></li>
+        <li class="header_menu_item"><a href="news.html">News</a></li>
+        <li class="header_menu_item"><a href="support.html">Support</a></li>
       </ul>
+      <a href="" class="header_icon-bar"><i id="menu_arrow" class="material-icons">expand_more</i></a>
     </header>
 
 
@@ -27,48 +26,51 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-          <h1>Where the magic happens</h1>
+          <h1>Panico Projects</h1>
         </div>
       </div>
     </section>
 
 
+    <section class="banners">
+      <section class="banner shadow clearfix">
+        <div class="banner_image" style="background-image: url(images/t_square.png); background-position: bottom center;"></div>
+        <div class="banner_copy">
+          <div class="banner_copy_text">
+            <h2>Works</h2>
+            <h3>How we spend our time?</h3>
+            <p>The collection of all the works we made, public or un-released, work in progress and discontinued.</p>
+            <a class="button" style="background: #3040f0;" href="works.html">See works</a>
+          </div>
+        </div>
+      </section>
 
-    <section class="card_row clearfix">
-      <div class="card shadow">
-        <img class="card_image" src="https://source.unsplash.com/400x400" alt="Card Image">
-        <div class="card_copy">
-          <h3>Android Theming</h3>
-          <p>Developer of Android UI/UX elements based on the Substratum theming system</p>
+      <section class="banner shadow clearfix">
+        <div class="banner_copy">
+          <div class="banner_copy_text">
+            <h2>News</h2>
+            <h3>Check whats new in this world</h3>
+            <p>Keep yourself updated with the latest news about the products we offer.</p>
+            <a class="button" style="background: #3040f0;" href="news.html">See news</a>
+          </div>
         </div>
-      </div>
-      <div class="card shadow">
-        <img class="card_image" src="https://source.unsplash.com/300x300" alt="Card Image">
-        <div class="card_copy">
-          <h3>Icons/Logo Design</h3>
-          <p>Designers of multiple icon packs for mobile homescreens</p>
+        <div class="banner_image" style="background-image: url(images/t_round.png); background-position: top center;"></div>
+      </section>
+
+      <section class="banner shadow clearfix">
+        <div class="banner_image" style="background-image: url(images/t_squircle.png); background-position: bottom center;"></div>
+        <div class="banner_copy">
+          <div class="banner_copy_text">
+            <h2>Support</h2>
+            <h3>Users first</h3>
+            <p>A series of guides and helpful stuff that will help you enjoying our works as best as possible.</p>
+            <a class="button" style="background: #3040f0;" href="support.html">Get Support</a>
+          </div>
         </div>
-      </div>
-      <div class="card shadow">
-        <img class="card_image" src="https://source.unsplash.com/500x500" alt="Card Image">
-        <div class="card_copy">
-          <h3>Web Designer</h3>
-          <p>Who do you think designed this website?</p>
-        </div>
-      </div>
+      </section>
     </section>
 
 
-    <section class="banner shadow clearfix">
-      <div class="banner_image"></div>
-      <div class="banner_copy">
-        <div class="banner_copy_text">
-          <h3>Titolo Banner</h3>
-          <h4>Sottotitolo Banner</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, est doloremque harum consequuntur esse ipsa debitis! Corporis eum aut, voluptatem ad recusandae nihil hic officiis rem molestiae, incidunt cum quod!</p>
-        </div>
-      </div>
-    </section>
 
     <footer class="footer">
       <p>Copyright - 2018 Andrea Panico</p>
@@ -85,6 +87,14 @@
         $(".header_icon-bar").click(function(e){
           /*seleziona la classe in verde e modifica*/
           $(".header_menu").toggleClass('is-open');
+
+          var arrow = "#menu_arrow";
+
+          if ($(arrow).text() == "expand_more")
+             $(arrow).text("expand_less")
+          else
+             $(arrow).text("expand_more");
+
           /*sovrascrivi evento di default*/
           e.preventDefault();
 

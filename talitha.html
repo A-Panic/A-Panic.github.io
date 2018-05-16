@@ -10,15 +10,14 @@
   </head>
   <body>
 
-    <header class="header clearfix">
+    <header class="header">
       <a href="index.html" class="header_logo"><img src="images/pp_logo.svg" alt="Logo"></a>
-      <a href="" class="header_icon-bar"><i class="material-icons">menu</i>
-      </a>
       <ul class="header_menu animate">
-        <li class="header_menu_item"><a href="index.html">Home</a></li>
         <li class="header_menu_item"><a href="works.html">Works</a></li>
-        <li class="header_menu_item"><a href="links.html">Links</a></li>
+        <li class="header_menu_item"><a href="news.html">News</a></li>
+        <li class="header_menu_item"><a href="support.html">Support</a></li>
       </ul>
+      <a href="" class="header_icon-bar"><i id="menu_arrow" class="material-icons">expand_more</i></a>
     </header>
 
 
@@ -106,6 +105,14 @@
         $(".header_icon-bar").click(function(e){
           /*seleziona la classe in verde e modifica*/
           $(".header_menu").toggleClass('is-open');
+
+          var arrow = "#menu_arrow";
+
+          if ($(arrow).text() == "expand_more")
+             $(arrow).text("expand_less")
+          else
+             $(arrow).text("expand_more");
+
           /*sovrascrivi evento di default*/
           e.preventDefault();
 

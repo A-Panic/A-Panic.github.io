@@ -42,6 +42,9 @@ body {
   box-shadow: 0 3px 4px #0004;
 }
 
+.text-light {
+  color: white;
+}
 
 
 /*-------------------------------
@@ -284,6 +287,17 @@ body {
   color: white;
 }
 
+.footer_main i {
+  vertical-align: -6px;
+}
+.footer_main a {
+  color: white;
+}
+
+.footer_secondary {
+  opacity: 0.6;
+}
+
 
 
 /*-------------------------------
@@ -326,6 +340,8 @@ body {
     order: 1;
     width: 100%;
     height: 200px;
+  }
+  .banner_image--home {
     background-size: contain;
     background-repeat: no-repeat;
   }

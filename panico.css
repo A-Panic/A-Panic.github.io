@@ -47,6 +47,7 @@ body {
 }
 
 
+
 /*-------------------------------
   Header
 -------------------------------*/
@@ -154,6 +155,49 @@ body {
   font-weight: 300;
 }
 
+
+
+/*-------------------------------
+  Title
+-------------------------------*/
+
+.title {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+}
+.title_text {
+  color: white;
+  font-size: 54px;
+  font-weight: bold;
+  position: absolute;
+  top: 120px;
+  left: 80px;
+  padding: 0;
+  margin: 0;
+}
+.title_background {
+  width: 150%;
+  height: 100%;
+  transform: rotate(-10deg);
+  transform-origin: -10% 100%;
+	background: linear-gradient(135deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
 
 /*-------------------------------
@@ -306,7 +350,15 @@ body {
 
 @media (max-width: 767px) {
 
-  /*Header*/
+  /*Title*/
+  .title {
+    height: 50%;
+    margin-bottom: 20%;
+  }
+  .title_text {
+    top: 60px;
+    left: 60px;
+  }
 
   /*Cover*/
   .cover {

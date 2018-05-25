@@ -261,6 +261,12 @@ body {
   margin-top: 12px;
   margin-right: 12px;
   padding: 16px;
+  color: black;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.navbar_icon:hover {
+  opacity: 1;
 }
 
 /*-------------------------------

@@ -106,9 +106,14 @@
           $(".navbar_menu").toggleClass('unfolded');
 
           var icon = "#menuToggle";
+          
+          if ($(icon).text() == "menu")
+            $('html,body').animate({
+              scrollTop: $(".navbar").offset().top},
+              'slow');
 
           if ($(icon).text() == "menu")
-             $(icon).text("close")
+            $(icon).text("close")
           else
              $(icon).text("menu");
 

@@ -13,7 +13,10 @@
 
     <section class="title">
       <div class="title_background"></div>
+      <div class="title_copy">
         <h1 class="title_text">Panico Projects</h1>
+        <h5 class="title_subtext">Let's make it possible.</h5>
+      </div>
     </section>
 
     <header class="navbar animate clearfix" id="myNavBar">
@@ -80,13 +83,10 @@
     <script>
       // When the user scrolls the page, execute myFunction
       window.onscroll = function() {myFunction()};
-
       // Get the header
       var header = document.getElementById("myNavBar");
-
       // Get the offset position of the navbar
       var sticky = header.offsetTop;
-
       // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
       function myFunction() {
         if (window.pageYOffset >= sticky) {
@@ -98,7 +98,7 @@
         }
       }
 
-      /*aspetta che il documenti sia pronto*/
+      /*aspetta che la pagina sia pronta*/
       $(document).ready(function(){
         /*seleziona la classe in verde ed esegui al click*/
         $(".navbar_icon").click(function(e){

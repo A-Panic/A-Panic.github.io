@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panico Projects</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="panico.css">
   </head>
   <body>
 
-    <header class="header">
-      <a href="index.html" class="header_logo"><img src="images/pp_logo.svg" alt="Logo"></a>
-      <ul class="header_menu animate">
-        <li class="header_menu_item"><a href="works.html">Works</a></li>
-        <li class="header_menu_item"><a href="news.html">News</a></li>
-        <li class="header_menu_item"><a href="support.html">Support</a></li>
-      </ul>
-      <a href="" class="header_icon-bar"><i id="menu_arrow" class="material-icons">expand_more</i></a>
-    </header>
-
-
-
     <section class="title">
       <div class="title_background"></div>
         <h1 class="title_text">Panico Projects</h1>
     </section>
+
+    <header class="navbar animate clearfix" id="myNavBar">
+      <a href="index.html" class="navbar_logo"><img src="images/pp_logo_dark.svg" alt="Logo"></a>
+      <a href="" class="navbar_icon"><i id="menuToggle" class="material-icons">menu</i></a>
+      <ul class="navbar_menu animate">
+        <li class="navbar_menu_item"><a href="works.html">Works</a></li>
+        <li class="navbar_menu_item"><a href="news.html">News</a></li>
+        <li class="navbar_menu_item"><a href="support.html">Support</a></li>
+        <li class="navbar_menu_item"><a href="support.html">About</a></li>
+      </ul>
+    </header>
 
 
     <section class="banners">
@@ -78,19 +78,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the header
+      var header = document.getElementById("myNavBar");
+
+      // Get the offset position of the navbar
+      var sticky = header.offsetTop;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          header.classList.add("sticky");
+          header.classList.add("shadow");
+        } else {
+          header.classList.remove("sticky");
+          header.classList.remove("shadow");
+        }
+      }
+
       /*aspetta che il documenti sia pronto*/
       $(document).ready(function(){
         /*seleziona la classe in verde ed esegui al click*/
-        $(".header_icon-bar").click(function(e){
+        $(".navbar_icon").click(function(e){
           /*seleziona la classe in verde e modifica*/
-          $(".header_menu").toggleClass('is-open');
+          $(".navbar_menu").toggleClass('unfolded');
 
-          var arrow = "#menu_arrow";
+          var icon = "#menuToggle";
 
-          if ($(arrow).text() == "expand_more")
-             $(arrow).text("expand_less")
+          if ($(icon).text() == "menu")
+             $(icon).text("close")
           else
-             $(arrow).text("expand_more");
+             $(icon).text("menu");
 
           /*sovrascrivi evento di default*/
           e.preventDefault();

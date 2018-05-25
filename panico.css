@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  font-family: "roboto";
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -32,7 +32,7 @@ body {
   padding: 15px 20px;
   margin: 10px;
   border-radius: 3px;
-  font-weight: 500;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
@@ -62,7 +62,6 @@ body {
 
 .header_logo {
   display: block;
-  color: white;
   padding: 5px;
 }
 .header_logo img{
@@ -199,6 +198,70 @@ body {
 	}
 }
 
+
+/*-------------------------------
+  Navbar
+-------------------------------*/
+
+.navbar {
+  width: 100%;
+  min-height: 80px;
+  background: #eee;
+}
+.navbar_logo {
+  float: left;
+  padding: 5px;
+}
+.navbar_logo img {
+  display: block;
+  margin: auto auto;
+  height: 70px;
+  width: 70px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.navbar_logo img:hover {
+  opacity: 1;
+}
+.sticky {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.sticky + .banners {
+  padding-top: 80px;
+}
+
+.navbar_menu {
+  float: right;
+  margin: 0 0;
+  padding-right: 8px;
+}
+.navbar_menu_item {
+  display: inline-block;
+  padding: 13px;
+}
+.navbar_menu_item a {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.navbar_menu_item a:hover {
+  opacity: 1;
+}
+
+.navbar_icon {
+  display: none;
+  float: right;
+  margin-top: 12px;
+  margin-right: 12px;
+  padding: 16px;
+}
 
 /*-------------------------------
   Cards
@@ -352,12 +415,29 @@ body {
 
   /*Title*/
   .title {
-    height: 50%;
-    margin-bottom: 20%;
+    height: 60%;
   }
   .title_text {
     top: 60px;
     left: 60px;
+  }
+
+  /*Navbar*/
+  .navbar_icon {
+    display: block;
+  }
+  .navbar_menu {
+    width: 100%;
+    height: 0;
+    float: none;
+    overflow: hidden;
+    padding: 0;
+  }
+  .navbar_menu_item {
+    display: block;
+  }
+  .unfolded {
+    height: 200px;
   }
 
   /*Cover*/

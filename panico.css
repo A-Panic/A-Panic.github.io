@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .eheh {
@@ -27,11 +27,11 @@ body {
 }
 
 .button {
-  background: white;
-  color: #3040f0;
+  background: #3040f0;
+  color: white;
   padding: 15px 20px;
   margin: 10px;
-  border-radius: 3px;
+  border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -39,119 +39,12 @@ body {
   box-shadow: 0 2px 2px #0000;
 }
 .button:hover {
+  background: #3f4fff;
   box-shadow: 0 3px 4px #0004;
 }
 
 .text-light {
   color: white;
-}
-
-
-
-/*-------------------------------
-  Header
--------------------------------*/
-
-.header {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0) );
-  position: fixed;
-  padding-bottom: 30px;
-  z-index: 100;
-  width: 100%;
-}
-
-.header_logo {
-  display: block;
-  padding: 5px;
-}
-.header_logo img{
-  display: block;
-  margin: auto auto;
-  height: 70px;
-  width: 70px;
-}
-
-.header_icon-bar {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  margin: auto auto;
-}
-.header_icon-bar:hover {
-  background: #fff2;
-}
-
-.header_menu {
-  width: 100%;
-  height: 0px;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
-}
-
-.header_menu_item {
-  display: block;
-}
-.header_menu_item a {
-  color: white;
-  font-weight: 400;
-  display: block;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.header_menu_item a:hover {
-  background: #fff2;
-}
-
-.is-open {
-  height: 180px;
-}
-
-
-
-/*-------------------------------
-  Cover
--------------------------------*/
-
-.cover {
-  width: 100%; height: 70%;
-  background-image: url(images/mountains.jpg); background-position: center center; background-size: cover;
-  position: relative;
-  z-index: 0
-}
-
-.cover_filter {
-  width: 100%; height: 100%;
-  background: black;
-  position: absolute;
-  z-index: 1;
-  opacity: 0.5;
-}
-
-.cover_caption {
-  height: 100%; width: 100%;
-  display:table;
-  position: relative;
-  z-index: 1;
-  padding: 0 20px;
-}
-
-.cover_caption_copy {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  color: white;
-}
-.cover_caption_copy h1 {
-  font-size: 48px;
-  font-weight: 200;
-}
-.cover_caption_copy h3 {
-  font-size: 20px;
-  font-weight: 300;
 }
 
 
@@ -163,6 +56,7 @@ body {
 .title {
   width: 100%;
   height: calc(100% - 80px);
+  background: #eee;
   overflow: hidden;
   position: relative;
 }
@@ -233,14 +127,15 @@ body {
 .navbar_logo img:hover {
   opacity: 1;
 }
+
 .sticky {
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
 }
-.sticky + .banners {
-  padding-top: 80px;
+.sticky + .content {
+  padding-top: 100px;
 }
 
 .navbar_menu {
@@ -279,6 +174,18 @@ body {
 .navbar_icon:hover {
   opacity: 1;
 }
+
+
+
+/*-------------------------------
+  Content
+-------------------------------*/
+
+.content{
+  padding-top: 20px;
+}
+
+
 
 /*-------------------------------
   Cards
@@ -327,7 +234,6 @@ body {
 }
 
 .banner {
-  background: white;
   height: auto;
   width: auto;
   margin: 10px 0;
@@ -375,6 +281,41 @@ body {
   Articles
 -------------------------------*/
 
+.works {
+  width: 100%;
+  height: 600px;
+  border: 1px solid red;
+}
+.works_sidebar {
+  float: left;
+  width: 30%;
+  height: 100%;
+  overflow-y: scroll;
+  border: 1px solid green;
+}
+.works_sidebar_list {
+  padding: 0;
+  margin: 0;
+}
+.works_sidebar_list_item {
+  padding: 48px 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.works_page {
+  float: right;
+  width: 70%;
+  background: #fff;
+  padding: 40px 40px;
+  border: 1px solid blue;
+}
+
+
+
+/*-------------------------------
+  Articles
+-------------------------------*/
+
 .articles {
   display: block;
   max-width: 1200px;
@@ -403,23 +344,26 @@ body {
 -------------------------------*/
 
 .footer {
-  height: 200px;
-  background-color: #333;
+  height: 160px;
+  background-color: #eee;
   padding: 30px;
   margin-top: 40px;
   text-align: center;
-  color: white;
 }
 
+.footer_main {
+  color: black;
+  opacity: 0.7;
+}
 .footer_main i {
   vertical-align: -6px;
 }
 .footer_main a {
-  color: white;
+  color: black;
 }
 
 .footer_secondary {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 

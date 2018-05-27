@@ -21,11 +21,9 @@ body {
 .animate {
   transition: all 0.3s ease-out;
 }
-
 .shadow {
   box-shadow: 0 4px 4px #0002;
 }
-
 .button {
   background: #3040f0;
   color: white;
@@ -42,7 +40,6 @@ body {
   background: #3f4fff;
   box-shadow: 0 3px 4px #0004;
 }
-
 .text-light {
   color: white;
 }
@@ -89,7 +86,6 @@ body {
 	background-size: 400% 400%;
 	animation: Gradient 15s ease infinite;
 }
-
 @keyframes Gradient {
 	0% {
 		background-position: 0% 50%
@@ -127,7 +123,6 @@ body {
 .navbar_logo img:hover {
   opacity: 1;
 }
-
 .sticky {
   width: 100%;
   position: fixed;
@@ -137,7 +132,6 @@ body {
 .sticky + .content {
   padding-top: 100px;
 }
-
 .navbar_menu {
   float: right;
   margin: 0;
@@ -160,7 +154,6 @@ body {
 .navbar_menu_item a:hover {
   opacity: 1;
 }
-
 .navbar_icon {
   display: none;
   float: right;
@@ -188,42 +181,6 @@ body {
 
 
 /*-------------------------------
-  Cards
--------------------------------*/
-
-.card_row{
-  display: flex !important;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-.card{
-  flex: 1;
-  max-width: 30%;
-  margin: 1.5%;
-  background-color: white;
-  float: left;
-  border-radius: 5px;
-  z-index: 0
-}
-
-.card_image {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.card_copy {
-  padding: 5px 20px;
-}
-.card_copy h3 {
-  margin: 10px 0;
-}
-
-
-
-/*-------------------------------
   Banner
 -------------------------------*/
 
@@ -232,13 +189,11 @@ body {
   width: 100%;
   height: auto;
 }
-
 .banner {
   height: auto;
   width: auto;
   margin: 10px 0;
 }
-
 .banner_image {
   width: 25%;
   height: 280px;
@@ -247,13 +202,11 @@ body {
   background-position: center center;
   background-size: cover;
 }
-
 .banner_copy {
   width: 75%;
   height: 280px;
   float: left;
 }
-
 .banner_copy_text {
   position: relative;
   padding: 30px;
@@ -276,35 +229,33 @@ body {
 }
 
 
-
 /*-------------------------------
-  Articles
+  Works
 -------------------------------*/
 
-.works {
-  width: 100%;
-  height: 600px;
-  border: 1px solid red;
+.works_list {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0 32px;
+  border: 1px solid blue;
 }
-.works_sidebar {
-  float: left;
+.works_card {
   width: 30%;
-  height: 100%;
-  overflow-y: scroll;
-  border: 1px solid green;
-}
-.works_sidebar_list {
+  height: auto;
+  display: inline-block;
+  margin: 16px 8px;
   padding: 0;
-  margin: 0;
 }
-.works_sidebar_list_item {
-  padding: 48px 20px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+.works_card_image {
+  width: 100%;
+  height: auto;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
 }
 .works_page {
-  float: right;
-  width: 70%;
   background: #fff;
   padding: 40px 40px;
   border: 1px solid blue;
@@ -322,13 +273,11 @@ body {
   padding: 20px;
   margin: 0 10%;
 }
-
 .side-bar {
   float: left;
   width: 30%;
   padding: 0 40px;
 }
-
 .article {
   background: white;
   float: right;
@@ -350,7 +299,6 @@ body {
   margin-top: 40px;
   text-align: center;
 }
-
 .footer_main {
   color: black;
   opacity: 0.7;
@@ -361,7 +309,6 @@ body {
 .footer_main a {
   color: black;
 }
-
 .footer_secondary {
   opacity: 0.5;
 }
@@ -403,13 +350,9 @@ body {
     height: 220px;
   }
 
-  /*Cover*/
-  .cover {
-    height: 100%;
-  }
-  .cover--subpages{
-    height: 70%;
-  }
+  /*Works*/
+  .works_card {
+    width:90%;
 
   /*Cards*/
   .card_row{
@@ -425,7 +368,6 @@ body {
   .banners{
     padding: 0;
   }
-
   .banner {
     height: auto;
     display: flex !important;
